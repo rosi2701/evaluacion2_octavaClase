@@ -3,19 +3,19 @@ const trabajos = [
     {
         title: "Batimóvil",
         category: "Industrial/Modelado 3D",
-        imagen: "img/Batimóvil Contexto.jpg",
+        imagen: "img/BatimovilContexto.jpg",
         
     },
     {
         title: "Transformaciones corporales",
         category: "Diseño gráfico e ilustración",
-        imagen: "img/Taller 3 Nari.png",
+        imagen: "img/Taller3Nari.png",
         
     },
     {
         title: "Festival del Cachureo",
         category: "Diseño de experiencia",
-        imagen: "img/Potada festival.png",
+        imagen: "img/Potadafestival.png",
         
     },
     {
@@ -27,25 +27,25 @@ const trabajos = [
     {
         title: "Preventips",
         category: "Diseño de sistemas",
-        imagen: "img/Preventips portada.png",
+        imagen: "img/Preventipsportada.png",
         
     },
     {
         title: "Scape!",
         category: "Diseño de sistemas",
-        imagen: "img/Scape!.png",
+        imagen: "img/Scape.png",
         
     },
     {
         title: "Tocador PALADS",
         category: "Diseño Industrial",
-        imagen: "img/Tocador PALADS.png",
+        imagen: "img/TocadorPALADS.png",
         
     },
     {
         title: "Bloody Heart",
         category: "Diseño industrial",
-        imagen: "img/Bloody Heart.png",
+        imagen: "img/BloodyHeart.png",
         
     }
 ];
@@ -97,3 +97,4 @@ trabajos.forEach(trabajo => {
     galleryGrid.appendChild(item);
 
 });
+
