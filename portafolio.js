@@ -3,50 +3,42 @@ const trabajos = [
     {
         title: "Batimóvil",
         category: "Industrial/Modelado 3D",
-        imagen: "img/BatimovilContexto.jpg",
-        
+        imagen: "img/BatimovilContexto.jpg"
     },
     {
         title: "Transformaciones corporales",
         category: "Diseño gráfico e ilustración",
-        imagen: "img/Taller3Nari.png",
-        
+        imagen: "img/Taller3Nari.png"
     },
     {
         title: "Festival del Cachureo",
         category: "Diseño de experiencia",
-        imagen: "img/Potadafestival.png",
-        
+        imagen: "img/Potadafestival.png"
     },
     {
         title: "NgenPet",
         category: "Diseño de productos",
-        imagen: "img/NgenPet.jpg",
-       
+        imagen: "img/NgenPet.jpg"
     },
     {
         title: "Preventips",
         category: "Diseño de sistemas",
-        imagen: "img/Preventipsportada.png",
-        
+        imagen: "img/Preventipsportada.png"
     },
     {
         title: "Scape!",
         category: "Diseño de sistemas",
-        imagen: "img/Scape.png",
-        
+        imagen: "img/Scape.png"
     },
     {
         title: "Tocador PALADS",
         category: "Diseño Industrial",
-        imagen: "img/TocadorPALADS.png",
-        
+        imagen: "img/TocadorPALADS.png"
     },
     {
         title: "Bloody Heart",
         category: "Diseño industrial",
-        imagen: "img/BloodyHeart.png",
-        
+        imagen: "img/BloodyHeart.png"
     }
 ];
 
@@ -54,34 +46,30 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawBasic);
 
 function drawBasic() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population',],
+    var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population'],
         ['New York City, NY', 8175000],
         ['Los Angeles, CA', 3792000],
         ['Chicago, IL', 2695000],
         ['Houston, TX', 2099000],
         ['Philadelphia, PA', 1526000]
-        ['Philadelphia, PA', 1526000]
-        ['Philadelphia, PA', 1526000]
-      ]);
-
-      var options = {
+    ]);
+    
+    var options = {
         title: 'Population of Largest U.S. Cities',
         chartArea: {width: '50%'},
         hAxis: {
-          title: 'Total Population',
-          minValue: 0
+            title: 'Total Population',
+            minValue: 0
         },
         vAxis: {
-          title: 'City'
+            title: 'City'
         }
-      };
-
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
+    };
+    
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
 
 const galleryGrid = document.querySelector(".gallery-grid");
 trabajos.forEach(trabajo => {
@@ -95,5 +83,4 @@ trabajos.forEach(trabajo => {
         </div>
     `;
     galleryGrid.appendChild(item);
-
 });
