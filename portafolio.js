@@ -95,4 +95,5 @@ trabajos.forEach(trabajo => {
         </div>
     `;
     galleryGrid.appendChild(item);
+
 });
