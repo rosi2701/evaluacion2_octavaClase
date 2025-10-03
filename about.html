@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosario Fuentes Carrizo - Diseñadora Integral</title>
     <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,42 +14,26 @@
             <h1>ROSARIO FUENTES CARRIZO</h1>
             <p>Diseñadora Integral</p>
         </header>
-
+        
         <!-- Navigation -->
         <nav class="nav">
-            <a href="index.html" class="active">Portafolio</a>
-            <a href="#">Sobre mí</a>
+            <a href="index.html">Portafolio</a>
+            <a href="#" class="active">Sobre mí</a>
         </nav>
-        <h2>Sobre mi</h2>
+        
+        <h2>Sobre mí</h2>
+        
         <div style="width: 350px; height: 400px; overflow: hidden;">
-        <img src="img/Yo.png" style="width: 100%; height: 100%; object-fit: cover; position: center;">
+            <img src="img/Yo.png" alt="Rosario Fuentes" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
+        
         <p>Hola! Soy Rosario Fuentes, soy diseñadora integral con interés en el diseño de experiencia, diseño industrial e ilustración.</p>
-
-          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          <div id="chart_div"></div>
-
-    </script>
-  </head>
-  <body>
-   
-  </body>
-</html>
         
-
-
-  
-
-        <!-- Gallery -->
+        <!-- Gráfico -->
+        <div style="width: 800px; margin: 20px auto;">
+            <canvas id="alla"></canvas>
+        </div>
         
-                </div>
-               
-                </div>
-                
-                </div>
-            </div>
-        </section>
-
         <!-- Footer -->
         <footer class="footer">
             <p>© 2025 Rosario Fuentes Carrizo. Todos los derechos reservados.</p>
@@ -58,6 +43,32 @@
             </div>
         </footer>
     </div>
+    
     <script src="portafolio.js"></script>
+    <script>
+        new Chart(document.getElementById("alla"), {
+            type: "line",
+            data: {
+                labels: ['Batimóvil', 'Festival del Cachureo', 'Transformaciones Corporales', 'NgenPet', 'Preventips', 'Scape!', 'Tocador PALADS', 'Bloody Heart'],
+                datasets: [
+                    {
+                        label: "Nivel de estrés por proyecto",
+                        data: [7, 8.5, 5, 10, 6.7, 6, 7.5,5],
+                        borderWidth: 1,
+                        borderColor: "Red",
+                        backgroundColor: "rgba(255, 0, 0, 0.1)"
+                    },
+                    
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
